@@ -1,5 +1,7 @@
 console.log("Hello JavaScript");
 
+// Difference between var, let, and const
+
 var name = 'Rahim'
 name = 'Jasim' // Reassign করা যায়
 var name = 'Kuddus' // Redeclare করা যায়
@@ -18,3 +20,28 @@ console.log(address);
 let location = ['Dhaka', 'Banani']
 location.push = 'Gulshan' // Redeclare করা না গেলেও, ভ্যালু পুশ করা সম্ভব।
 console.log(location);
+
+
+// Function default parameter for not provided values
+
+function numbers (num1, num2){
+    let total = num1 + num2
+    console.log(num1, num2, 'Total:', total);
+}
+
+numbers (10, 20); // এখানে arguments দুটি দেওয়ায় আউটপুটে এসেছে সঠিক। কিন্তু যদি একটি দেওয়া হয় তখন একটা undefind এবং total এ NaN দেখাবে। একটি নাম্বার দিয়েও undefind এবং total বা NaN বন্ধ করার উপায় হচ্ছে function এর শুরুতে () ডিফল্ট সেট করে দেওয়া। যেমন-
+
+function allNumber (number1, number2, number3 = 0){
+    let total1 = number1 + number2 + number3
+    console.log(number1, number2, number3, 'Total:', total1);
+}
+
+allNumber (10,30); // এখানে arguments তিনটির জায়গায় দুটি দেওয়াতেও undefind এবং total এ NaN দেখাবে না। কারণ আমি শুরুতে ফানশনে কল করে ডিফল্ট হিসেবে = 0 সেট করে দিয়েছি। অর্থাৎ arguments এ কোন নাম্বার শর্ট থাকলে সেখানে সিস্টেম থেকে অটো 0 বসে কাউন্ট করে দিবে। 
+
+// *** নিচে ডিফল্ট কিছু মান দেওয়া হলো-***
+
+//* number --> = 0 [for add]
+//* number --> = 1 [for multiply]
+//* string --> = ''
+//* array --> = []
+//* object --> = {}
