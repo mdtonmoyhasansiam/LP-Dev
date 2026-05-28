@@ -57,3 +57,33 @@ h3 {
     background-repeat: cover;
 
 }
+/* Duplicate */
+
+#net {
+    background-color: bisque;
+}
+
+h3 {
+ text-decoration: underline;
+ font-style: italic;
+}
+
+#major {
+    font-size: 25px;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.background {
+    background-color: cadetblue;
+}
+
+.imgset {
+    height: 900px;
+    background-color: aqua;
+    background-image: url('images/Binghatti_Flare_in_JVT_Dubai_by_Binghatti_Developers_fb83b07f05.webp');
+    background-repeat: cover;
+
+}
